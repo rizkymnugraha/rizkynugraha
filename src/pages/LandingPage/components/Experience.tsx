@@ -111,14 +111,16 @@ export default function Experience() {
         </div>
 
         {/* Summary Stats */}
-        <div className="mb-16 grid md:grid-cols-3 gap-6">
-          <div className="relative group">
+        <div className="mb-16 grid md:grid-cols-2 md:grid-row-2 gap-6">
+          <div className="relative group row-span-2">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-emerald-300 rounded-xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
-            <div className="relative p-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-blue-500/20 transition-all duration-300 text-center">
-              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-300 mb-2">
+            <div className="h-full flex flex-col items-center justify-center relative p-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-blue-500/20 transition-all duration-300 text-center">
+              <span className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-300 mb-2">
                 7+
-              </div>
-              <p className="text-gray-300 font-medium">Years Experience</p>
+              </span>
+              <span className="text-gray-300 font-medium">
+                Years Delivering Results
+              </span>
             </div>
           </div>
 
@@ -126,9 +128,9 @@ export default function Experience() {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-300 rounded-xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
             <div className="relative p-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-emerald-500/20 transition-all duration-300 text-center">
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300 mb-2">
-                50+
+                Diverse
               </div>
-              <p className="text-gray-300 font-medium">Projects Completed</p>
+              <p className="text-gray-300 font-medium">Projects Delivered</p>
             </div>
           </div>
 

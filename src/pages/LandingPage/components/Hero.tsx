@@ -41,13 +41,15 @@ export default function Hero() {
           <h1 className="py-4 mb-4 font-bold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-300">
             Rizky M. Nugraha
           </h1>
-          <div className="flex items-center mt-8 space-x-4">
-            <div className="w-12 h-px bg-blue-500/50"></div>
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:items-center mt-8 space-x-4">
+            <div className="w-full md:w-12 h-px bg-blue-500/50"></div>
             <p className="text-xl text-gray-400">Frontend Engineer</p>
-            <div className="w-6 q h-px bg-gray-300/50"></div>
+            <div className="w-full md:w-6 q h-px bg-gray-300/50"></div>
             <p className="text-xl text-gray-300">
-              Worked with global clients 🌍 — 🇦🇺 🇹🇭 🇲🇾 🇩🇪 🇺🇸 🇳🇿
+              Worked with global clients 🌍
             </p>
+            <div className="w-6 md:block hidden q h-px bg-gray-300/50"></div>
+            <p className="text-xl text-gray-300">🇦🇺 🇹🇭 🇲🇾 🇩🇪 🇺🇸 🇳🇿</p>
           </div>
         </div>
 
