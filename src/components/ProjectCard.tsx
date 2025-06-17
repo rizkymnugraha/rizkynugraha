@@ -1,5 +1,6 @@
 import { MouseEventHandler, ReactNode, useState } from "react";
 import { ExternalLink } from "lucide-react";
+import KeyContributions from "./KeyContributions";
 
 interface IProject {
   time: string;
@@ -42,41 +43,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Existing gradient background */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-emerald-300 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
 
-      {/* Mouse-following popup */}
-      {isHovered && project.jobDescs.length > 0 && (
-        <div
-          className="absolute z-50 pointer-events-none transition-opacity duration-200"
-          style={{
-            left: `${mousePosition.x + 15}px`,
-            top: `${mousePosition.y + 15}px`,
-            transform: "translate(0, 0)",
-          }}
-        >
-          <div className="px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg shadow-2xl backdrop-blur-sm w-sm">
-            <div className="flex items-center mb-2">
-              <span className="text-sm text-blue-500 tracking-[0.2em]">
-                Key Contributions:
-              </span>
-              <div className="flex-grow h-px ml-4 bg-gray-600"></div>
-            </div>
-            <ul className="space-y-2">
-              {project.jobDescs.map((job, index) => (
-                <li key={index} className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shrink-0 mt-1.5"></div>
-                  <span className="text-sm text-gray-200 font-medium">
-                    {job}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
-
-      {/* Existing card content */}
       <div className="relative p-8 transition-all duration-300 border border-gray-800 bg-gray-900/50 backdrop-blur-sm rounded-2xl hover:border-blue-500/20">
         <div className="flex items-start justify-between">
           <div>
@@ -90,7 +58,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="p-2 bg-gray-800/50 rounded-xl">{project.icon}</div>
         </div>
 
-        <p className="mb-4 text-gray-400 w-3/4">{project.description}</p>
+        <p className="mb-4 text-gray-400 md:w-3/4">{project.description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, tagIndex) => (
@@ -115,6 +83,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         </a>
       </div>
+
+      {project.jobDescs.length > 0 && (
+        <KeyContributions
+          isHovered={isHovered}
+          mousePosition={mousePosition}
+          jobDescs={project.jobDescs}
+        />
+      )}
     </div>
   );
 }

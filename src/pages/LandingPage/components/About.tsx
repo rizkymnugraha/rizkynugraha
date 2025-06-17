@@ -33,13 +33,14 @@ export default function About() {
               </div>
               <div className="space-y-4">
                 <p className="leading-relaxed text-gray-300">
-                  I'm a front-end web developer from Bandung, Indonesia, with a
-                  strong focus on building fast, accessible, and visually
-                  polished web experiences using ReactJS. I care deeply about
-                  clean code, smooth user interactions, and making the web a
-                  place where everyone can engage comfortably. My passion lies
-                  in crafting intuitive user interfaces that don't just work—but
-                  feel great to use.
+                  Hi! You can call me <strong>Rizky</strong>. I'm a front-end
+                  web developer from Bandung, Indonesia, with a strong focus on
+                  building fast, accessible, and visually polished web
+                  experiences using ReactJS. I care deeply about clean code,
+                  smooth user interactions, and making the web a place where
+                  everyone can engage comfortably. My passion lies in crafting
+                  intuitive user interfaces that don't just work—but feel great
+                  to use.
                 </p>
                 <p className="leading-relaxed text-gray-300">
                   I started my career working with international clients, mostly

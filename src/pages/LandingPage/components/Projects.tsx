@@ -53,7 +53,11 @@ const projects = [
     link: "https://www.npmjs.com/package/@team-triniti/venus",
     tags: ["React", "Tailwind", "Storybook"],
     icon: <Palette className="w-6 h-6" />,
-    jobDescs: [],
+    jobDescs: [
+      "Build a UI Component Library from scratch using Storybook",
+      "Setup the project to be ready to published in NPM JS",
+      "Build various components with light and dark mode styling",
+    ],
   },
 ];
 
